@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blog.dao.repairMapper">
+    <resultMap id="Maintenance" type="Maintenance">
+        <id property="orderno" column="orderno"/>
+        <result property="repairpeople" column="repairpeople"/>
+        <result property="repairdescipt" column="repairdescipt"/>
+        <result property="repairstatus" column="repairstatus"/>
+    </resultMap>
+
+
+    <select id="queryAllrepair" resultType="Maintenance">
+        select * from project_equipment.maintenance
+    </select>
+
+    <insert id="addrepair" parameterType="Maintenance">
+        insert into project_equipment.maintenance(ordertime,ordername,repairdevice,issuedescipt,repairstatus,repairpeople,repairtotal,repairdescipt,havetime,descript,agoto)
+        values (#{ordertime},#{ordername},#{repairdevice},#{issuedescipt},#{repairstatus},#{repairpeople},#{repairtotal},#{repairdescipt},#{havetime},#{descript},#{agoto});
+    </insert>
+
+    <delete id="deleterepair" parameterType="int">
+        delete from project_equipment.maintenance where orderno=#{orderno};
+    </delete>
+
+    <select id="queryrepair" resultType="Maintenance">
+        select * from project_equipment.maintenance
+        where orderno =#{orderno}
+    </select>
+
+    <update id="updaterepair" parameterType="Maintenance">
+        update project_equipment.maintenance
+        set ordername=#{ordername},repairdevice=#{repairdevice},issuedescipt=#{issuedescipt},repairstatus=#{repairstatus},repairpeople=#{repairpeople},repairtotal=#{repairtotal},descript=#{descript},agoto=#{agoto}
+        where orderno=#{orderno};
+    </update>
+</mapper>

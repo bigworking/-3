@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.dao.EquipmentMaintenanceDao">
+    <resultMap id="EquipmentMaintenance" type="EquipmentMaintenance">
+        <id property="protectno" column="protectno"/>
+        <result property="protectpeople" column="protectpeople"/>
+        <result property="protectdescribe" column="protectdescribe"/>
+        <result property="protectstatue" column="protectstatue"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="EquipmentMaintenance">
+        select protectno, protectpeople, protectdescribe, protectstatue
+        from equipmentMaintenance
+    </select>
+
+    <update id="updateById" parameterType="EquipmentMaintenance">
+        update equipmentMaintenance
+        set protectstatue = #{protectstatue}
+        where protectno = #{protectno};
+    </update>
+</mapper>

@@ -1,0 +1,7 @@
+2021-11-07 11:29:19.077  INFO 19556 --- [main] com.blog.BlogApplicationTests            : Starting BlogApplicationTests on LAPTOP-IP2CPSQF with PID 19556 (started by LENOVO in C:\Users\LENOVO\Desktop\blog\blog)
+2021-11-07 11:29:19.090 DEBUG 19556 --- [main] com.blog.BlogApplicationTests            : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2021-11-07 11:29:19.090  INFO 19556 --- [main] com.blog.BlogApplicationTests            : The following profiles are active: dev
+2021-11-07 11:29:23.677  INFO 19556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-07 11:29:23.866  INFO 19556 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-11-07 11:29:24.851  INFO 19556 --- [main] com.blog.BlogApplicationTests            : Started BlogApplicationTests in 6.493 seconds (JVM running for 8.539)
+2021-11-07 11:29:25.538  INFO 19556 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
